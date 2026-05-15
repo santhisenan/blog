@@ -1,3 +1,3 @@
-Working on machine learning.
-
-[Read the blog](/blog/).
+---
+title: "Blog"
+---

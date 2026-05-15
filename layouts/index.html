@@ -1,13 +1,7 @@
 {{ define "main" }}
 <content>
-  <h3 style="margin-bottom:0">#{{ .Title }}</h3>
-  <small>
-    <a href="{{ "tags" | relURL }}">All tags</a>
-    ·
-    <a href="/blog/">Back to blog</a>
-  </small>
   <ul class="blog-posts">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range (site.GetPage "/posts").RegularPages.ByDate.Reverse }}
     <li>
       <span>
         <i>
@@ -22,5 +16,12 @@
     <li>No posts yet</li>
     {{ end }}
   </ul>
+  <small>
+    <div>
+      {{ range .Site.Taxonomies.tags }}
+      <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+      {{ end }}
+    </div>
+  </small>
 </content>
 {{ end }}

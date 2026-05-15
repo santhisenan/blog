@@ -1,6 +1,6 @@
-baseURL = 'https://santhisenan.github.io/'
+baseURL = 'https://santhisenan.github.io/blog/'
 languageCode = 'en-us'
-title = 'Santhisenan'
+title = "Santhisenan's Blog"
 theme = "hugo-bearblog"
 author = "Santhisenan A"
 enableRobotsTXT = true
@@ -24,13 +24,18 @@ copyright = "© Santhisenan A"
 # Nav.
 [[menu.main]]
 name = "Home"
-url = "/"
+pageRef = "/"
 weight = 1
 
 [[menu.main]]
 name = "Tags"
-url = "/tags"
+pageRef = "/tags"
 weight = 2
+
+[[menu.main]]
+name = "About"
+url = "https://santhisenan.github.io/"
+weight = 3
 
 [taxonomies]
    tag = "tags"
